@@ -12,7 +12,7 @@ endif ()
 
 # Default to C++14
 if (NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD 17)
 endif ()
 
 # Emulate colcon
@@ -72,6 +72,7 @@ set(DRIVER_NODE_DEPS
   geometry_msgs
   OpenCV
   rclcpp
+  rclcpp_components
   ros2_shared
   sensor_msgs
   std_msgs
