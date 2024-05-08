@@ -7,7 +7,7 @@
 # I'm using this for smoke tests
 # To run tello_ros in a docker container you will need to set up ports, x-windows, etc.
 
-FROM osrf/ros:foxy-desktop
+FROM osrf/ros:humble-desktop
 
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -18,7 +18,7 @@ RUN yes | pip3 install 'transformations==2018.9.5'
 
 WORKDIR /work/tello_ros_ws/src
 
-RUN git clone https://github.com/clydemcqueen/tello_ros.git
+RUN git clone https://github.com/wyattPol/tello_ros.git
 RUN git clone https://github.com/ptrmu/ros2_shared.git
 RUN git clone https://github.com/ptrmu/fiducial_vlam.git
 
@@ -26,4 +26,4 @@ WORKDIR /work/tello_ros_ws
 
 RUN rosdep install -y --from-paths . --ignore-src
 
-RUN /bin/bash -c "source /opt/ros/foxy/setup.bash && colcon build"
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build"
