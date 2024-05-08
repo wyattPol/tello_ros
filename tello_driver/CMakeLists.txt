@@ -127,6 +127,7 @@ set(JOY_NODE_DEPS
   class_loader
   geometry_msgs
   rclcpp
+  rclcpp_components
   sensor_msgs
   tello_msgs)
 
