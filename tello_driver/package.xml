@@ -21,6 +21,7 @@
     <depend>class_loader</depend>
     <depend>cv_bridge</depend>
     <depend>rclcpp</depend>
+    <depend>rclcpp_components</depend>
     <depend>geometry_msgs</depend>
     <depend>ros2_shared</depend>
     <depend>sensor_msgs</depend>
