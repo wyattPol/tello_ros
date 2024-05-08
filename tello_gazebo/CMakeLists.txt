@@ -12,7 +12,7 @@ endif ()
 
 # Default to C++14
 if (NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif ()
 
 # Emulate colcon
@@ -29,6 +29,7 @@ find_package(gazebo_dev REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(tello_msgs REQUIRED)
@@ -57,6 +58,7 @@ ament_target_dependencies(
   gazebo_ros
   geometry_msgs
   rclcpp
+  rclcpp_components
   std_msgs
   tello_msgs
 )
